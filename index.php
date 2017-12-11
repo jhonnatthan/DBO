@@ -16,7 +16,7 @@
     });
 
     $app->get('/cadastrar', function (){
-
+        $user = "";
     });
 
     // adição de usuário
