@@ -3,10 +3,12 @@
     require 'vendor/autoload.php';
     require 'init.php';
 
-    $app = new \Slim\App([ 'settings' => [
+    $app = new \Slim\App([
+        'settings' => [
             'displayErrorDetails' => true
         ]
     ]);
+
 
     $app->get('/', function() {
         $loginController = new App\Controllers\LoginController;
@@ -17,6 +19,12 @@
         $loginController = new App\Controllers\LoginController;
         $loginController->logar();
     });
+
+    $app->get('/solicitar-acesso', function() {
+       $loginController = new App\Controllers\LoginController;
+       $loginController->solicitarAcesso();
+    });
+
 
     $app->run();
 

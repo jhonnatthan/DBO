@@ -51,3 +51,19 @@
         array_walk_recursive($dados, 'trataArray');
     }
 
+    function responseJson() {
+        header('Access-Control-Allow-Origin: *');
+        header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept');
+        header('Content-Type: application/json; charset=UTF-8');
+    }
+
+    function responseHtml() {
+        header('Access-Control-Allow-Origin: *');
+        header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept');
+        header('Content-Type: text/html; charset=UTF-8');
+    }
+
+    function getMobileData() {
+
+    }
+

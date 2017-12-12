@@ -5,7 +5,7 @@
         </div>
     </div>
     <div class="row">
-        <form class="col-md-4 col-md-offset-4 col-xs-12" id="frmlog">
+        <form class="col-md-12 col-xs-12" id="frmlog">
             <div class="form-group">
                 <label>Login</label>
                 <input type="text" name="login" class="form-control" placeholder="Login" maxlength="50" required autofocus>
@@ -24,7 +24,7 @@
                 </select>
             </div>
             <button class="btn btn-lg btn-primary btn-block top-m" type="submit">Acessar <i class="fa fa-lock" aria-hidden="true"></i></button>
-            <button class="btn btn-md btn-default btn-block top-m" type="submit">Solicitar acesso <i class="fa fa-user-plus" aria-hidden="true"></i></button>
+            <button class="btn btn-md btn-default btn-block top-m" type="button" id="solicitarAcesso">Solicitar acesso <i class="fa fa-user-plus" aria-hidden="true"></i></button>
         </form>
     </div>
 </div>

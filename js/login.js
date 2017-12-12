@@ -12,6 +12,12 @@ $(function () {
 
     });
 
-    function sendPost(n,o){$.post("/",n,function(n){o(n)},"json").fail(function(n,o,s){console.log(n.responseText)})}
+    $('#solicitarAcesso').click( function () {
+        $('#modalContent').load('/solicitar-acesso', function () {
+            $('#modal').modal('show');
+        });
+    });
+
+    function sendPost(n,o){$.post("/auth",n,function(n){o(n)},"json").fail(function(n,o,s){console.log(n.responseText)})}
 
 });

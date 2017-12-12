@@ -22,4 +22,9 @@ class LoginController {
         }
     }
 
+    public function solicitarAcesso() {
+        responseHtml();
+        \App\View::modal('login/modalacesso');
+    }
+
 }
