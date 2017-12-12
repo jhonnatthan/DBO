@@ -1,53 +1,53 @@
 <?php
 
-function converteData($data) {
-	if ( ! strstr( $data, '/' ) ) {
-		sscanf($data, '%d-%d-%d', $y, $m, $d);
-		return sprintf('%02d/%02d/%04d', $d, $m, $y); 
-	} else {
-		sscanf($data, '%d/%d/%d', $d, $m, $y);
-		return sprintf('%04d-%02d-%02d', $y, $m, $d);
-	}
+    function converteData($data) {
+        if ( ! strstr( $data, '/' ) ) {
+            sscanf($data, '%d-%d-%d', $y, $m, $d);
+            return sprintf('%02d/%02d/%04d', $d, $m, $y);
+        } else {
+            sscanf($data, '%d/%d/%d', $d, $m, $y);
+            return sprintf('%04d-%02d-%02d', $y, $m, $d);
+        }
 
-	return false; 
-}
+        return false;
+    }
 
-function excluiDir($dir) {
+    function excluiDir($dir) {
 
-    if ($dd = opendir($dir)) {
-        while (false !== ($arq = readdir($dd))) {
-            if($arq != "." && $arq != ".."){
-                $path = "$dir/$arq";
-                if(is_dir($path)){
-                    excluiDir($path);
-                }elseif(is_file($path)){
-                    unlink($path);
+        if ($dd = opendir($dir)) {
+            while (false !== ($arq = readdir($dd))) {
+                if($arq != "." && $arq != ".."){
+                    $path = "$dir/$arq";
+                    if(is_dir($path)){
+                        excluiDir($path);
+                    }elseif(is_file($path)){
+                        unlink($path);
+                    }
                 }
             }
+            closedir($dd);
         }
-        closedir($dd);
-    }
-    rmdir($dir);
-}
-
-function geraAleatorio() {
-    $tamanho = 15;
-
-    $all_str = "abcdefghijlkmnopqrstuvxyzwABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
-
-    $nome = "";
-    for ($i = 0;$i <= $tamanho;$i++) {
-        $nome .= $all_str[mt_rand(0,61)];
+        rmdir($dir);
     }
 
-    return $nome;
-}
+    function geraAleatorio() {
+        $tamanho = 15;
 
-function trataArray(&$item, $key) {
-    $item = trim($item);
-    $item = addslashes($item);
-}
+        $all_str = "abcdefghijlkmnopqrstuvxyzwABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
 
-function protegeDados(&$dados) {
-    array_walk_recursive($dados, trataArray());
-}
+        $nome = "";
+        for ($i = 0;$i <= $tamanho;$i++) {
+            $nome .= $all_str[mt_rand(0,61)];
+        }
+
+        return $nome;
+    }
+
+    function trataArray(&$item, $key) {
+        $item = addslashes(trim($item));
+    }
+
+    function protegeDados(&$dados) {
+        array_walk_recursive($dados, 'trataArray');
+    }
+
