@@ -7,6 +7,7 @@
         <meta name="description" content="Site para publicação de documentação técnica e diarios de bordo">
         <meta name="author" content="Equipe WorkLess">
         <meta name="keywords" content="diario de bordo, tcc, documentação, wkless, online">
+        <meta name="theme-color" content="#00449B">
         <link rel="icon" href="favicon.ico">
         <title>DBO - <?php echo $title;?></title>
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">

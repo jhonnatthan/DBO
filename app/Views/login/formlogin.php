@@ -1,6 +1,6 @@
 <div class="container-fluid h-100">
     <div class="row h-100 justify-content-center align-items-center">
-        <div class="col-md-5 col-xs-12 p-4 m-1 mb-4 bg-white rounded shadow-md animated fadeInLeft">
+        <div class="col-md-5 col-xs-12 p-5 m-1 mb-4 bg-white rounded shadow-md animated fadeInLeft">
             <p class="h2 text-primary text-center">Entrar</p>
             <form class="mt-3" id="frmlog">
                 <div class="form-group">
