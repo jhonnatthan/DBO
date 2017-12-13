@@ -1,23 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Muli');
+
+html,body {
+    height: 100%;
+}
+
 body { font-family: 'Muli', sans-serif; background: #efefef;margin: 0px;padding: 0px;}
-
-.top-g      {margin-top:  40px;}
-.top-m      {margin-top:  20px;}
-.top-p      {margin-top:  10px;}
-.top-xg   {margin-top:  60px;}
-
-.bot-g      {margin-bottom: 40px;}
-.bot-m      {margin-bottom: 20px;}
-.bot-p      {margin-bottom: 10px;}
-.bot-xg   {margin-bottom: 60px;}
-
-.all-g    {margin-top: 40px; margin-bottom: 40px;}
-.all-m    {margin-top: 20px; margin-bottom: 20px;}
-.all-p    {margin-top: 10px; margin-bottom: 10px;}
-.all-xg	  {margin-top: 60px; margin-bottom: 60px;}
-
-.no-margin {margin: 0;}
-.no-padding {padding: 0;}
 
 .loading {  position: fixed;  z-index: 1060;  height: 2em;  width: 2em;  overflow: show;  margin: auto;  top: 0;  left: 0;  bottom: 0;  right: 0;}
 .loading:before {  content: '';  display: block;  position: fixed;  top: 0;  left: 0;  width: 100%;  height: 100%;  background-color: rgba(0,0,0,0.8);}
@@ -30,6 +17,11 @@ body { font-family: 'Muli', sans-serif; background: #efefef;margin: 0px;padding:
 @keyframes spinner { 0% {    -webkit-transform: rotate(0deg);    -moz-transform: rotate(0deg);    -ms-transform: rotate(0deg);    -o-transform: rotate(0deg);    transform: rotate(0deg);  } 100% {    -webkit-transform: rotate(360deg);    -moz-transform: rotate(360deg);    -ms-transform: rotate(360deg);    -o-transform: rotate(360deg);    transform: rotate(360deg);  } }
 
 ::-webkit-scrollbar {width:8px;}
-::-webkit-scrollbar-track {background: rgba(79,91,105,.4);}
-::-webkit-scrollbar-thumb {background: rgba(79,91,105,1); }
-::-webkit-scrollbar-thumb:window-inactive {	background: rgba(79,91,105,1);}
+::-webkit-scrollbar-track {background: rgba(0, 123, 255, 0.4);}
+::-webkit-scrollbar-thumb {background: rgb(0, 123, 255); }
+::-webkit-scrollbar-thumb:window-inactive {	background: rgb(0, 123, 255);}
+
+.shadow-xs{box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);}
+.shadow-sm{box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);}
+.shadow-md{box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);}
+.shadow-lg{box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);}
